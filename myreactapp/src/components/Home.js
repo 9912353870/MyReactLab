@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Welcome from './Welcome.js';
 class Home extends Component {
   constructor() {
     super();
@@ -18,7 +18,9 @@ class Home extends Component {
     if (this.state.username === "anirudh" && this.state.password === "Pa1234") {
       alert("Login Success");
       this.setState({ isAuthenticated: true });
-    } else {
+    
+    }
+     else {
       alert("Login failed");
       this.setState({
         isAuthenticated: false,
@@ -37,7 +39,7 @@ class Home extends Component {
   }
   render() {
     return this.state.isAuthenticated === true ? (
-      <div>User logged succesfull</div>
+      <div><Welcome /></div>
     ) : (
       <div>
         <p>Enter your name:</p>
